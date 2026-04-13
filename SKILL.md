@@ -1,46 +1,22 @@
 # 制浆造纸行业专业知识库
 
-这是一套完全开源的制浆造纸行业专业知识库，专注于工艺、浆水平衡计算、物料计算等核心内容，分为制浆和造纸两个主要模块。
-
-## 项目目标
-
-中国制浆造纸行业每年面临大量技术问题，尤其是在工艺优化、浆水平衡计算、物料计算等方面。本项目旨在：
-
-- 提供专业、准确的行业知识
-- 一键部署为 OpenClaw Skills，接入微信/企业微信/QQ，让行业从业者用熟悉的方式获得AI顾问服务
-- 导入任意RAG平台（Dify、FastGPT、RagFlow等）构建专业问答机器人
-
-核心差异：本项目不只是数据工具，而是一套决策框架——帮助行业从业者用正确的思维顺序解决实际生产问题。
+一套全面的制浆造纸行业知识库，专注于工艺、浆水平衡计算、物料计算等核心内容。
 
 ## 快速开始
 
 ### 方式零：一键安装到 Claude Code（最快）
 
-npx skills add xbpaper/papermaking-skill
+npx skills add your-username/papermaking-skill
 
 ### 方式一：直接阅读知识库
 
 进入 knowledge/ 目录，按需阅读：
 
-#### 制浆部分
-
-- 00_pulping_process.md - 制浆工艺详解
-- 01_pulp_balance.md - 浆水平衡计算
-- 02_material_calculation.md - 物料计算
-- 03_equipment_operation.md - 设备操作与维护
-
-#### 造纸部分
-
-- 00_papermaking_process.md - 造纸工艺详解
-- 01_water_balance.md - 水平衡计算
-- 02_material_calculation.md - 物料计算
-- 03_equipment_operation.md - 设备操作与维护
-
 ### 方式二：部署为 OpenClaw Skills（推荐·接入微信）
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/xbpaper/papermaking-skill.git
+git clone https://github.com/xbpaper/Papermaking-Skills.git
 cd papermaking-skill
 
 # 2. 安装到 OpenClaw
@@ -49,8 +25,6 @@ openclaw skills install ./skills/papermaking-mentor.skill
 # 3. 验证安装
 openclaw skills list
 ```
-
-部署后在微信/企业微信中 @机器人 直接对话即可。详见 部署指南。
 
 ### 方式三：导入 RAG 平台
 
@@ -95,7 +69,7 @@ papermaking-skill/
 ## 核心框架：决策顺序
 
 1. **先定可行集**
-   → 用产能+原料确定实际可采用的工艺和设备
+   → 根据产能确定实际可采用的设备和工艺参数
    → 特殊工艺（废纸浆、漂白）优先核查
 2. **目标倒推**
    → 先问"最终产品质量要求是什么"
@@ -107,11 +81,6 @@ papermaking-skill/
 
 → "产能为X时选A，产能不足选B"
 → 不给模糊备选清单
-
-## 如何贡献
-
-欢迎以下形式的贡献：纠错、补充工艺/设备分析、贡献实际生产数据、分享真实案例（脱敏处理）。
-请参阅 CONTRIBUTING.md。
 
 ## 许可证
 
